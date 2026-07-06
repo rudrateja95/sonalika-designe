@@ -204,20 +204,18 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>
+<script>
 function openPDF(file) {
 
-    document.getElementById("pdfViewer").src = file;
+    document.getElementById("pdfViewer").src =
+        "assets/pdfjs/web/viewer.html?file=" + encodeURIComponent(file);
 
     var modal = new bootstrap.Modal(document.getElementById("pdfModal"));
     modal.show();
-
 }
 
-function closePDF(){
-
+function closePDF() {
     document.getElementById("pdfViewer").src = "";
-
 }
 </script>
 
